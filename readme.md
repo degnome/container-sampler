@@ -19,3 +19,7 @@ $ docker-compose -f docker-compose-dev.yml scale web=3 lb=1
 $ docker-compose -f docker-compose-dev.yml kill
 $ docker-compose -f docker-compose-dev.yml rm
 ```
+
+3. Access the website
+	- http://{machine-ip}  (Load Balanced UI)
+	- http://{machine-ip}:1936  (HAProxy)
