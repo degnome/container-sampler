@@ -1,0 +1,14 @@
+lb:
+  image: eeacms/haproxy:latest
+  links:
+    - web
+  ports:
+    - "80:5000"
+    - "1936:1936"
+web:
+  # build: web
+  image: degnome/hello:latest
+  environment:
+    PORT: 80
+    PING: true
+    PINGHOST: www.google.com
